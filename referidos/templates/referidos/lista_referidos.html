@@ -1,0 +1,10 @@
+{% extends 'referidos/base.html' %}
+
+{% block content %}
+     {% for referido in referidos %}
+        <div class="post">
+            <p>{{ referido.nome }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
