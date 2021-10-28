@@ -2,24 +2,28 @@
 
 {% block content %}
      {% for referido in referidos %}
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Nome referido</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Prioridade</th>
-                    <th scope="col">Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ referido.nome }}</td>
-                    <td>{{ referido.telefone }}</td>
-                    <td>{{ referido.prioridade }}</td>
-                    <td>{{ referido.status }}</td>
-                </tr>
-            </tbody>
-        </table>
+
+            <div class="row">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nome referido</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Prioridade</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ referido.nome }}</td>
+                        <td>{{ referido.telefone }}</td>
+                        <td>{{ referido.prioridade }}</td>
+                        <td>{{ referido.status }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
     {% endfor %}
 
 {% endblock %}
