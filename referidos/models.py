@@ -32,7 +32,7 @@ class Referido(models.Model):
     telefone = models.CharField(max_length=200)
     prioridade = models.BooleanField()
     status = models.CharField(max_length=200, choices=STATUS_REFERIDOS, default='Iniciar')
-    data_agendamento = models.DateTimeField()
+    data_agendamento = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.nome

@@ -19,4 +19,11 @@ def list_referidos(request):
 # Cria um novo referido
 
 def referido_new(request):
-    return HttpResponse("Arrumar esse def para criar o forms")
+    if request.method == "POST":
+        form = ReferidoForm(request.POST)
+        if form.is_valid():
+            form.save(commit=False)
+            return redirect('referidos')
+    else:
+        form = ReferidoForm()
+    return render(request, 'referidos/lista_referidos.html', {'form': form})
