@@ -1,7 +1,7 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
-     {% for referido in referidos %}
+
 
             <div class="row">
                 <table class="table">
@@ -14,16 +14,18 @@
                     </tr>
                     </thead>
                     <tbody>
+                    {% for referido in referidos %}
                     <tr>
                         <td>{{ referido.nome }}</td>
                         <td>{{ referido.telefone }}</td>
                         <td>{{ referido.prioridade }}</td>
                         <td>{{ referido.status }}</td>
                     </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
 
-    {% endfor %}
+
 
 {% endblock %}
