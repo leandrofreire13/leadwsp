@@ -1,0 +1,12 @@
+{% extends 'referidos/base.html' %}
+
+{% block content %}
+
+    <h2>Novo referido</h2>
+    <form method="POST" class="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn´default">Salvar</button>
+    </form>
+
+{% endblock %}
