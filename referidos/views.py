@@ -31,3 +31,14 @@ def referido_new(request):
 
 
 # Editar um referido
+def referido_edit(request, pk):
+    post = get_object_or_404(Referido, pk=pk)
+    if request.method == "POST":
+        form = ReferidoForm(request.POST, instance=post)
+        if form.is_valid():
+            referido = form.save(commit=False)
+            referido.save()
+            return redirect('referidos')
+    else:
+        form = ReferidoForm(instance=post)
+    return render(request, 'referidos/referidos_form.html', {'form': form})

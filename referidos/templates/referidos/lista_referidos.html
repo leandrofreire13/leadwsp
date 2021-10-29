@@ -11,6 +11,7 @@
                         <th scope="col">Telefone</th>
                         <th scope="col">Prioridade</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Editar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -20,6 +21,7 @@
                         <td>{{ referido.telefone }}</td>
                         <td>{{ referido.prioridade }}</td>
                         <td>{{ referido.status }}</td>
+                        <td><a class="" href="{% url 'referido_edit' pk=referido.pk %}"><span class="glyphicon glyphicon-pencil">Editar</span></a></td>
                     </tr>
                     {% endfor %}
                     </tbody>
