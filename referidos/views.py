@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 
-from .models import Referido
 from .forms import ReferidoForm
+from .models import Referido
+
 
 
 # Create your views here.
@@ -26,4 +27,4 @@ def referido_new(request):
             return redirect('referidos')
     else:
         form = ReferidoForm()
-    return render(request, 'referidos/lista_referidos.html', {'form': form})
+    return render(request, 'referidos/referidos_form.html', {'form': form})
