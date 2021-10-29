@@ -33,6 +33,7 @@ class Referido(models.Model):
     prioridade = models.BooleanField()
     status = models.CharField(max_length=200, choices=STATUS_REFERIDOS, default='Iniciar')
     data_agendamento = models.DateTimeField(null=True, blank=True)
+    quem_indicou = models.CharField(max_length=200, default='')
 
     def __str__(self):
         return self.nome
