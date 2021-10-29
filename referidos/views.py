@@ -5,7 +5,6 @@ from .forms import ReferidoForm
 from .models import Referido
 
 
-
 # Create your views here.
 
 def index(request):
@@ -28,4 +27,18 @@ def referido_new(request):
             return redirect('referidos')
     else:
         form = ReferidoForm()
+    return render(request, 'referidos/referidos_form.html', {'form': form})
+
+
+# Editar um referido
+def referido_edit(request, pk):
+    post = get_object_or_404(Referido, pk=pk)
+    if request.method == "POST":
+        form = ReferidoForm(request.POST, instance=post)
+        if form.is_valid():
+            referido = form.save(commit=False)
+            referido.save()
+            return redirect('referidos')
+    else:
+        form = ReferidoForm(instance=post)
     return render(request, 'referidos/referidos_form.html', {'form': form})
