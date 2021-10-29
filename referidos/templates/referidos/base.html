@@ -14,8 +14,11 @@
         <nav class="navbar navbar-dark bg-dark">
           <div class="container">
               <a class="navbar-brand" href="/">Inicio</a>
+              <!-- Somente eu como usuário posso ver os referidos -->
+              {% if user.is_authenticated %}
               <a class="navbar-brand" href="/referidos">Referidos</a>
               <a class="navbar-brand" href="{% url 'referido_new' %}">Cadastrar Refeiros</a>
+              {% endif %}
           </div>
         </nav>
     </div>
