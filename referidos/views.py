@@ -5,7 +5,6 @@ from .forms import ReferidoForm
 from .models import Referido
 
 
-
 # Create your views here.
 
 def index(request):
@@ -29,3 +28,6 @@ def referido_new(request):
     else:
         form = ReferidoForm()
     return render(request, 'referidos/referidos_form.html', {'form': form})
+
+
+# Editar um referido
