@@ -74,13 +74,22 @@ WSGI_APPLICATION = 'leadwsp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'leadwsp',
+        'USER': 'jlgjvqbgodkxmd',
+        'PASSWORD': '84bdbb9d3a27910546f01ef106bfb4e354da8146aac3ecbdfc038572ee940ca2',
+        'HOST': 'ec2-44-197-94-126.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
