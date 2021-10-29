@@ -23,7 +23,8 @@ def referido_new(request):
     if request.method == "POST":
         form = ReferidoForm(request.POST)
         if form.is_valid():
-            form.save(commit=False)
+            referido = form.save(commit=False)
+            referido.save()
             return redirect('referidos')
     else:
         form = ReferidoForm()
