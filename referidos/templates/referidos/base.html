@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% comment %} <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">WSP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,13 +27,14 @@
         <li class="nav-item">
             <a class="nav-link" href="referidos">Referidos</a>
         </li>
+        {% comment %}
         <!-- Aparecer só quando logado -->         
         <li class="nav-item">
             <a class="nav-link" href="/admin">Admin</a>
-        </li> 
+        </li> {% endcomment %}
         </ul>
     </div>
-    </nav> {% endcomment %}
+    </nav>
     <div class="container">
         <br>
         {% block content %}
