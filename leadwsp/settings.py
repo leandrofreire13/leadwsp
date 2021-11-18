@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u)57+cyb5jlc!bm&lbn05n^8k@fn+y2zp*u4y)%hjxeac1%k^p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['referido.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'leadwsp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join((BASE_DIR), '/')],
+        'DIRS': [os.path.join((BASE_DIR), 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
