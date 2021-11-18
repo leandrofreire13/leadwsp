@@ -1,4 +1,6 @@
 {% load static %}
+{% load bootstrap_icons %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +27,11 @@
         <li class="nav-item">
             <a class="nav-link" href="/referidos">Referidos</a>
         </li>
-        
+        {% comment %}
+        <!-- Aparecer só quando logado -->         
+        <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+        </li> {% endcomment %}
         </ul>
     </div>
     </nav>
