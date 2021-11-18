@@ -1,33 +1,20 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
-
-    <div class="row">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Quem indicou</th>
-                <th scope="col">Nome referido</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Prioridade</th>
-                <th scope="col">Status</th>
-                <th scope="col">Editar</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for referido in referidos %}
-            <tr>
-                <td>{{ referido.quem_indicou }}</td>
-                <td>{{ referido.nome }}</td>
-                <td>{{ referido.telefone }}</td>
-                <td>{{ referido.prioridade }}</td>
-                <td>{{ referido.status }}</td>
-                <td><a class="" href="{% url 'referido_edit' pk=referido.pk %}"><span class="glyphicon glyphicon-pencil">Editar</span></a></td>
-            </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+{% for referido in referidos %}
+<div class="card">
+    <div class="card-body">
+        <p>Quem indicou: {{ referido.quem_indicou }}</p>
+        <p>Nome: {{ referido.nome }} </p>
+        <p>Telefone: {{ referido.telefone }} </p>
+        <p>Prioridade: {{ referido.prioridade }} </p>
+        <p>Status: {{ referido.status }} </p>
+        <p></p>
     </div>
+</div>
+<br>
+{% endfor %}
+<div>   
     <a class="btn btn-primary" href="referidos/new" role="button">Novo Referido</a>
-
+</div>
 {% endblock %}
