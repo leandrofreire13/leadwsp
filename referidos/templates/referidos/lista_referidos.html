@@ -6,10 +6,10 @@
     <div class="card-body">
         <p>Quem indicou: {{ referido.quem_indicou }}</p>
         <p>Nome: {{ referido.nome }} </p>
-        <p>Telefone: {{ referido.telefone }} </p>
+        <p>Telefone: <a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a> </p>
         <p>Prioridade: {{ referido.prioridade }} </p>
         <p>Status: {{ referido.status }} </p>
-        <p></p>
+        <p><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-secondary" role="button">Editar</a></p>
     </div>
 </div>
 <br>
