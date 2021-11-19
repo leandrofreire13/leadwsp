@@ -1,4 +1,4 @@
-# leadwsp
+# Lead WSP
 
 ## Aplicação criada com Django
 
