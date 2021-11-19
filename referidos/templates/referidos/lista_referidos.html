@@ -1,7 +1,9 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
+
 {% for referido in referidos %}
+
 <div class="card">
     <div class="card-body">
         <p>Quem indicou: {{ referido.quem_indicou }}</p>
