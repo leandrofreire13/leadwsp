@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u)57+cyb5jlc!bm&lbn05n^8k@fn+y2zp*u4y)%hjxeac1%k^p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['referido.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://referidowsp.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
@@ -38,9 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'referidos.apps.ReferidosConfig',
-    'django_bootstrap_icons'
-]
+    'referidos.apps.ReferidosConfig']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
