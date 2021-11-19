@@ -10,7 +10,7 @@
         <p>Nome: {{ referido.nome }} </p>
         <p> <a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a> </p>
         <p>Prioridade: {{ referido.prioridade }} </p>
-        <p class="status-iniciar">Status: {{ referido.status }} </p>
+        <p data-status="{{ referido.status }}" class="status">{{ referido.status }} </p>
         <p><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info" role="button">Editar</a></p>
     </div>
 </div>
