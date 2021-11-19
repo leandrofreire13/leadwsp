@@ -1,4 +1,8 @@
 a{
     text-decoration: none;
-    color: green;
+    color: yellowgreen;
+}
+
+.status-iniciar{
+    color: aquamarine;
 }
