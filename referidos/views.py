@@ -13,7 +13,7 @@ def index(request):
 
 @login_required
 def list_referidos(request):
-    referidos = Referido.objects.filter()
+    referidos = Referido.objects.all().order_by('-status')
     return render(request, 'referidos/lista_referidos.html', {'referidos': referidos})
 
 
