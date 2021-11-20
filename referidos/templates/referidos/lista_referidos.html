@@ -24,7 +24,11 @@
             {% endif %}
         </div>
         <div class="col"><p data-status="{{ referido.status }}" class="status">{{ referido.status }} </p></div>
-        <div class="col"><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info" role="button"><i class="fas fa-pencil-alt"></i></a></div>
+        <div class="col">
+            <a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info"  role="button">
+                <i class="fas fa-pencil-alt"></i>
+            </a>
+        </div>
     </div>
     </div>
 </div>
