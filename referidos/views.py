@@ -14,7 +14,8 @@ def index(request):
 @login_required
 def list_referidos(request):
     referidos = Referido.objects.all().order_by('-status')
-    return render(request, 'referidos/lista_referidos.html', {'referidos': referidos})
+    form = ReferidoForm(request.POST)
+    return render(request, 'referidos/lista_referidos.html', {'referidos': referidos, 'form': form})
 
 
 # Cria um novo referido
