@@ -3,6 +3,56 @@ a{
     color: yellowgreen;
 }
 
-.status-iniciar{
-    color: aquamarine;
+.status[data-status="Iniciar"]{
+    color:#4b61d1;
+}
+
+.status[data-status="Ligação 1"]{
+    color: #20b2aa;
+}
+
+.status[data-status="Ligação 2"]{
+    color: #9300ff;
+}
+
+.status[data-status="Ligação 3"]{
+    color: #fc3468;
+}
+
+.status[data-status="Mandar áudio"]{
+    color: 	#A7C7E7;
+}
+
+.status[data-status="Áudio enviado"]{
+    color: 	#E1C16E;
+}
+
+.status[data-status="Agendado"]{
+    color: 	#E97451;
+}
+
+.status[data-status="Mandar texto"]{
+    color: 	#C19A6B;
+}
+
+.status[data-status="Texto enviado"]{
+    color: 	#D27D2D;
+}
+
+.status[data-status="Não venda"]{
+    color: 	#CC5500;
+}
+
+.status[data-status="Venda"]{
+    color: 	#00FF7F;
+}
+
+
+/* Prioridade */
+.good{
+    color: #088F8F;
+}
+
+.neutral{
+    color: #E1C16E;
 }
