@@ -6,11 +6,21 @@
 
 <div class="card text-white bg-dark mb-3">
     <div class="card-body">
-        <p>Quem indicou: {{ referido.quem_indicou }}</p>
+    
         <p>Nome: {{ referido.nome }} </p>
+
+        <p style="color: #848884;">Quem indicou: {{ referido.quem_indicou }}</p>
+
         <p> <a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a> </p>
-        <p>Prioridade: {{ referido.prioridade }} </p>
+
+        {% if referido.prioridade == True %}
+        <p class="good">Prioridade: <i class="fas fa-check-circle"></i>  </p>
+        {% else %}
+        <p class="neutral">Prioridade: <i class="far fa-circle"></i> </p>
+        {% endif %}
+
         <p data-status="{{ referido.status }}" class="status">{{ referido.status }} </p>
+
         <p><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info" role="button">Editar</a></p>
     </div>
 </div>

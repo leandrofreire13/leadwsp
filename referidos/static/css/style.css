@@ -46,3 +46,13 @@ a{
 .status[data-status="Venda"]{
     color: 	#00FF7F;
 }
+
+
+/* Prioridade */
+.good{
+    color: #088F8F;
+}
+
+.neutral{
+    color: #E1C16E;
+}
