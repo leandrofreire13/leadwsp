@@ -1,7 +1,9 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
-
+<div class="new">   
+    <a class="btn btn-info" href="referidos/new" role="button"><i class="fas fa-plus-circle"></i></a>
+</div>
 {% for referido in referidos %}
 
 <div class="card text-white bg-dark mb-3">
@@ -24,9 +26,8 @@
         <p><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info" role="button">Editar</a></p>
     </div>
 </div>
+
 <br>
 {% endfor %}
-<div>   
-    
-</div>
+
 {% endblock %}
