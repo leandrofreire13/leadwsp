@@ -69,3 +69,7 @@ a{
     padding:5px 3px;
     z-index:1;
 }
+
+ul.errorlist {
+    display:none;
+}
