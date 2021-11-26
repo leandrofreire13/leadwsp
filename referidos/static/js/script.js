@@ -6,6 +6,7 @@ var count = (str.match(/Iniciar/g) || []).length;
 document.getElementById("res").textContent = count
 
 
+
 /*
 <!--
   Iniciar - ok
