@@ -1,0 +1,18 @@
+{% extends 'referidos/base.html' %}
+
+{% block content %}
+{% if referidos %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Total de Referidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ referidos|length }}</td>
+        </tr>
+      </tbody>
+    </table>
+{% endif %}
+{% endblock %}

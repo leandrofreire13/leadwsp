@@ -18,6 +18,12 @@ def list_referidos(request):
     return render(request, 'referidos/lista_referidos.html', {'referidos': referidos, 'form': form})
 
 
+# Mostra dados sobre os referidos
+@login_required
+def lista_dados(request):
+    referidos = Referido.objects.all()
+    return render(request, 'referidos/dados.html', {'referidos': referidos})
+
 # Cria um novo referido
 @login_required
 def referido_new(request):
