@@ -1,18 +1,18 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
+
+<div id="textostatus">
+  {% for referido in referidos %}
+  <p style="display:none;">{{ referido.status }}</p>
+  {% endfor %}
+</div>
+
 {% if referidos %}
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Total de Referidos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ referidos|length }}</td>
-        </tr>
-      </tbody>
-    </table>
+
+<ul class="list-group">
+  <li class="list-group-item">Total de Referidos: {{ referidos|length }}</li>
+  <li class="list-group-item">Para iniciar: <span id='res'></span></li>
+</ul>
 {% endif %}
 {% endblock %}
