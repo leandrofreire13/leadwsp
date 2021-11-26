@@ -1,15 +1,13 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
-
 <div id="textostatus">
   {% for referido in referidos %}
   <p style="display:none;">{{ referido.status }}</p>
   {% endfor %}
 </div>
-
 {% if referidos %}
-<h2>Total de Referidos: {{ referidos|length }}</h2>
+<h2 style="color: #1f1fa9;">Total de Referidos: {{ referidos|length }}</h2>
 <div class="alert alert-primary" role="alert">
   Iniciar: <span id='ini'></span>
 </div>
