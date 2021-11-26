@@ -73,3 +73,7 @@ a{
 ul.errorlist {
     display:none;
 }
+
+.hide-me{
+display: none;
+}
