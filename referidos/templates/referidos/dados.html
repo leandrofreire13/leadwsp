@@ -9,20 +9,49 @@
 </div>
 
 {% if referidos %}
+<h2>Total de Referidos: {{ referidos|length }}</h2>
+<div class="alert alert-primary" role="alert">
+  Iniciar: <span id='ini'></span>
+</div>
 
-<ul class="list-group">
-  <li class="list-group-item">Total de Referidos: {{ referidos|length }}</li>
-  <li class="list-group-item">Para iniciar: <span id='ini'></span></li>
-  <li class="list-group-item">Ligação 1: <span id='lig1'></span></li>
-  <li class="list-group-item">Ligação 2: <span id='lig2'></span></li>
-  <li class="list-group-item">Ligação 3: <span id='lig3'></span></li>
-  <li class="list-group-item">Mandar áudio: <span id='maud'></span></li>
-  <li class="list-group-item">Áudio enviado: <span id='aud'></span></li>
-  <li class="list-group-item">Agendado: <span id='agen'></span></li>
-  <li class="list-group-item">Mandar texto: <span id='mtext'></span></li>
-  <li class="list-group-item">Texto enviado: <span id='text'></span></li>
-  <li class="list-group-item">Não venda: <span id='nven'></span></li>
-  <li class="list-group-item">Matrícula: <span id='ven'></span></li>
-</ul>
+<div class="alert alert-secondary" role="alert">
+  1ª Ligação: <span id='lig1'></span>
+</div>
+
+<div class="alert alert-secondary" role="alert">
+  2ª Ligação: <span id='lig2'></span>
+</div>
+
+<div class="alert alert-secondary" role="alert">
+  3ª Ligação: <span id='lig3'></span>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  Mandar áudio: <span id='maud'></span>
+</div>
+
+<div class="alert alert-warning" role="alert">
+  Áudio enviado: <span id='aud'></span>
+</div>
+
+<div style="background: #964f9b; color: white;" class="alert alert-info" role="alert">
+  Agendado: <span id='agen'></span>
+</div>
+
+<div class="alert alert-info" role="alert">
+  Mandar texto: <span id='mtext'></span>
+</div>
+
+<div class="alert alert-info" role="alert">
+  Texto enviado: <span id='text'></span>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  Não venda: <span id='nven'></span>
+</div>
+
+<div class="alert alert-success" role="alert">
+  Matrícula: <span id='ven'></span>
+</div>
 {% endif %}
 {% endblock %}
