@@ -1,40 +1,70 @@
 {% extends 'referidos/base.html' %}
 
 {% block content %}
-
-    <p>Meu link de vendas</p>
-    <a href="https://wup.onl/0033600001XBgGmAAL" target="_blank">Wiseup Online <i class="fas fa-share-alt"></i></a>
+    Abrir link <a href="https://wup.onl/0033600001XBgGmAAL" target="_blank">https://wup.onl/0033600001XBgGmAAL</a>
+    <br><br>
+    <textarea cols="10" rows="1" class="link-text form-control">https://wup.onl/0033600001XBgGmAAL</textarea>
+    <button class="btn btn-primary" id="copiar"><i class="far fa-clone"></i></button>
     <br><br>
 
-    <h4>Links para enviar depois da matrícula</h4> <br>
-    <p>*Parabéns, seu acesso anual foi efetivado, seja bem-vindo(a) à Wise Up Online!* 👏🎉 <br>
-    <p>*App Android:* 
-        <a href="https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=en&gl=US">
-            https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=en&gl=US
-        </a>
-    </p>
 
-    <p>*App IOS:* 
-        <a href="https://apps.apple.com/br/app/wise-up-online/id1476457267">
-            https://apps.apple.com/br/app/wise-up-online/id1476457267
-        </a>
-    </p>
+    <h4>Links pós matrícula</h4> <br>
+    <textarea name="" id="" cols="30" rows="10" class="text form-control">
+    *Parabéns, seu acesso anual foi efetivado, seja bem-vindo(a) à Wise Up Online!* 👏🎉
 
-    <p>*Site para Notebook, Smart TV e Computador:*
-        <a href="https://online.wiseup.com/login?lang=pt">
-            https://online.wiseup.com/login?lang=pt
-        </a>
-    </p>
+    *App Android:* https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=en&gl=US
 
-    <p>*Chat VIP do aluno (dúvidas técnicas e administrativas):* 
-        <a href="https://wiseup.com/faq/online/chat/">
-            https://wiseup.com/faq/online/chat/
-        </a>
-    </p>
-    <br>
-    <h4>Referidos - Validação</h4>
-    <p>Para quem matriculou <a href="https://bit.ly/3vl6rQR" target="_blank">bit.ly/3vl6rQR</a></p>
-    <p>Para quem Não matriculou <a href="https://bit.ly/3vo2NWu" target="_blank">bit.ly/3vo2NWu</a></p>
+    *App IOS:* https://apps.apple.com/br/app/wise-up-online/id1476457267
+
+    *Site para Notebook, Smart TV e Computador:* https://online.wiseup.com/login?lang=pt
+
+    *Chat VIP do aluno (dúvidas técnicas e administrativas):* https://wiseup.com/faq/online/chat/
+    </textarea>
+
+    <button class="btn btn-primary" id="copy"><i class="far fa-clone"></i></button>
+    <br><br>
+    <hr>
+    <h4>Referidos - Validação</h4> <br>
+    <p style="color: blue;">Para quem matriculou</p> <textarea name="" id="" cols="30" rows="1" class="link-text-1 form-control">bit.ly/3vl6rQR</textarea>
+    <button class="btn btn-primary" id="copiar1"><i class="far fa-clone"></i></button>
+    <br> <br>
+    <p style="color: orange;">Para quem Não matriculou</p> <textarea name="" id="" cols="30" rows="1" class="link-text-2 form-control">bit.ly/3vo2NWu</textarea>
+    <button class="btn btn-primary" id="copiar2"><i class="far fa-clone"></i></button>
+<script>
+let btn = document.querySelector('#copy');
+btn.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.text');
+  textArea.select();
+  document.execCommand('copy');
+
+});
+
+let button = document.querySelector('#copiar');
+button.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.link-text');
+  textArea.select();
+  document.execCommand('copy');
+
+});
+
+let button1 = document.querySelector('#copiar1');
+button1.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.link-text-1');
+  textArea.select();
+  document.execCommand('copy');
+
+});
+
+let button2 = document.querySelector('#copiar2');
+button2.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.link-text-2');
+  textArea.select();
+  document.execCommand('copy');
+
+});
+
+
+</script>
 
 {% endblock %}
 
