@@ -56,3 +56,5 @@ if(str.match(/Venda/g)){
     document.getElementById("ven").textContent = count
 }
 
+
+
