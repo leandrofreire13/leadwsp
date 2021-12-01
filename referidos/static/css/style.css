@@ -7,8 +7,8 @@ a{
     color: yellowgreen;
 }
 
-.status[data-status="Iniciar"]{
-    color:#4b61d1;
+.card-body[data-status="Iniciar"]{
+    background-color: #656e78;
 }
 
 .status[data-status="Ligação 1"]{
