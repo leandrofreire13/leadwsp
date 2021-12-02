@@ -27,12 +27,12 @@
     <tr>
       <td>{{ referido.nome }}</td>
       <td><a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a></td>
-      <td style="color: #848884; font-size:15px;">{{ referido.quem_indicou }}</td>
+      <td style="color: #62aba4; font-size:15px;">{{ referido.quem_indicou }}</td>
       <td>
           {% if referido.prioridade == True %}
-            <p class="good">Prioridade: <i class="fas fa-check-circle"></i>  </p>
+            <p class="good"> <i class="fas fa-check-square"></i></p>
             {% else %}
-            <p class="neutral">Prioridade: <i class="far fa-circle"></i> </p>
+            <p class="neutral"> <i class="fas fa-square-full"></i> </p>
           {% endif %}
       </td>
       <td><p data-status="{{ referido.status }}" class="status">{{ referido.status }} </p></td>
