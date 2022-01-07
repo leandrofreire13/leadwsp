@@ -26,6 +26,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Telefone</th>
       <th scope="col">Indicação</th>
+      <th scope="COL">Aluno?</th>
       <th scope="col">Prioridade</th>
       <th scope="col">Status</th>
       <th scope="col">Editar</th>
@@ -37,6 +38,13 @@
       <td>{{ referido.nome }}</td>
       <td><a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a></td>
       <td style="color: #62aba4; font-size:15px;">{{ referido.quem_indicou }}</td>
+      <td >
+        {% if referido.aluno == True %}
+          <p style="color: #62aba4; font-size:15px;">Aluno</p>
+        {% else %}
+          <p style="color: #ab6262; font-size:15px;">Não aluno</p>
+        {% endif %}    
+      </td>
       <td>
           {% if referido.prioridade == True %}
             <p class="good"> <i class="fas fa-check-square"></i></p>
