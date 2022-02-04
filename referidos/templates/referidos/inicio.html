@@ -9,15 +9,32 @@
 
 
     <h4 style="color: aliceblue;">Links pós matrícula</h4> <br>
+    <h2 style="color: aliceblue;"> Wiseup Online</h2>
     <textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="10" class="text form-control">
 *Parabéns, seu acesso anual foi efetivado, seja bem-vindo(a) à Wise Up Online!* 👏🎉
 *App Android:* https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=en&gl=US
 *App IOS:* https://apps.apple.com/br/app/wise-up-online/id1476457267
 *Site para Notebook, Smart TV e Computador:* https://online.wiseup.com/login?lang=pt
 *Chat VIP do aluno (dúvidas técnicas e administrativas):* https://wiseup.com/faq/online/chat/
-    </textarea>
+*Assista ao vídeo de como estudar com Wiseup Online* 
+https://drive.google.com/file/d/1MrZLB6Sxooxg-OdYM5tpCcuCZv2HXVFB/view?usp=sharing
+</textarea>
 
     <button class="btn btn-primary" id="copy"><i class="far fa-clone"></i></button>
+    <br><br>
+
+  <h2 style="color: aliceblue;"> Wiseup Live</h2>
+    <textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="10" class="text form-control">
+*Parabéns, seu acesso anual foi efetivado, seja bem-vindo(a) à Wise Up Online!* 👏🎉
+*App Android:* https://play.google.com/store/apps/details?id=com.wiseup.online.android&hl=en&gl=US
+*App IOS:* https://apps.apple.com/br/app/wise-up-online/id1476457267
+*Site para Notebook, Smart TV e Computador:* https://online.wiseup.com/login?lang=pt
+*Chat VIP do aluno (dúvidas técnicas e administrativas):* https://wiseup.com/faq/online/chat/
+*Assista ao vídeo de como estudar com Wiseup Live* 
+https://drive.google.com/file/d/1UavVIEMxWzPJOW3mn6fY6nqbhsM_NhZr/view?usp=sharing
+</textarea>
+
+    <button class="btn btn-primary" id="copiiy"><i class="far fa-clone"></i></button>
     <br><br>
     <hr>
     <h4 style="color: aliceblue;">Referidos - Validação</h4> <br>
@@ -30,6 +47,14 @@
 
 <script>
 let btn = document.querySelector('#copy');
+btn.addEventListener('click', function(e) {
+  let textArea = document.querySelector('.text');
+  textArea.select();
+  document.execCommand('copy');
+
+});
+    
+let btn = document.querySelector('#copiiy');
 btn.addEventListener('click', function(e) {
   let textArea = document.querySelector('.text');
   textArea.select();
