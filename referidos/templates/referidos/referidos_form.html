@@ -10,6 +10,9 @@
     </div>
         <button type="submit" class="save btn btn-outline-info">Salvar</button>
     </form>
-
+    Whatsapp
+    {% for referido in referidos %}
+    <td><a href="https://wa.me/{{ referido.telefone }}" target="_blank">Whatsapp</a></td>
+    {% endfor %}
 
 {% endblock %}
