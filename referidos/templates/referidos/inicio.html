@@ -43,23 +43,23 @@ https://drive.google.com/file/d/1UavVIEMxWzPJOW3mn6fY6nqbhsM_NhZr/view?usp=shari
     <br> <br>
     <p style="color: orange;">Para quem Não matriculou</p> <textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="1" class="link-text-2 form-control">bit.ly/3vo2NWu</textarea>
     <button class="btn btn-primary" id="copiar2"><i class="far fa-clone"></i></button>
-
+<br><br>
 <h4 style="color: aliceblue;">Validação - Via Texto</h4> <br>
 <p style="color: rgb(58, 172, 218);">Para quem matriculou</p>
-<textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="10" class="link-text-3 form-control">
+<textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="5" class="link-text-3 form-control">
 Oi, tudo bem?
 Entrei para um projeto muito legal de inglês, com flexibilidade de fazer qualquer hora do dia, bem legal mesmo.
 Indiquei seu contato para o Leandro (O DDD dele é 11 de SP) executivo que me atendeu.
 Abraços</textarea>
 <button class="btn btn-primary" id="copiar3"><i class="far fa-clone"></i></button>
 <br><br>
- <p style="color: orange;">Para quem Não matriculou</p> <textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="10" class="link-text-4 form-control">
+ <p style="color: orange;">Para quem Não matriculou</p> <textarea style="background-color: black; color:blanchedalmond" name="" id="" cols="30" rows="5" class="link-text-4 form-control">
 Oi, tudo bem?
 Tive acesso a um projeto muito legal de inglês, com flexibilidade de fazer qualquer hora do dia, bem legal mesmo.
 Indiquei seu contato para o Leandro (O DDD dele é 11 de SP) executivo que me atendeu.
 Abraços</textarea>
  <button class="btn btn-primary" id="copiar4"><i class="far fa-clone"></i></button>
-
+<br><br><br>
 <script>
 let btn = document.querySelector('#copy');
 btn.addEventListener('click', function(e) {
@@ -100,15 +100,15 @@ button2.addEventListener('click', function(e) {
   document.execCommand('copy');
 
 });
-let button2 = document.querySelector('#copiar3');
-button2.addEventListener('click', function(e) {
+let button3 = document.querySelector('#copiar3');
+button3.addEventListener('click', function(e) {
   let textArea = document.querySelector('.link-text-3');
   textArea.select();
   document.execCommand('copy');
 
 });
-let button2 = document.querySelector('#copiar4');
-button2.addEventListener('click', function(e) {
+let button3 = document.querySelector('#copiar4');
+button3.addEventListener('click', function(e) {
   let textArea = document.querySelector('.link-text-4');
   textArea.select();
   document.execCommand('copy');
