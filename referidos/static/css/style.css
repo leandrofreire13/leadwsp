@@ -7,7 +7,7 @@ a{
     color: yellowgreen;
 }
 /* visited link */
-a:visited {
+a:active {
   color: #d95f25;
 }
 
