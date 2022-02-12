@@ -6,6 +6,10 @@ a{
     text-decoration: none;
     color: yellowgreen;
 }
+/* visited link */
+a:visited {
+  color: #d95f25;
+}
 
 .status[data-status="Iniciar"]{
     color: #1b9ce9;
