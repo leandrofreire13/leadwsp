@@ -26,15 +26,31 @@ STATUS_REFERIDOS = (
     ('Venda','VENDA'),
 )
 
+MATRICULA = (
+   ('Aluno', 'Aluno'),
+   ('Não Aluno', 'Não Aluno')
+)
+ 
+PRIORIDADE = (
+   ('Neutro', 'Neutro'),
+   ('Sim', 'Sim'),
+   ('Não', 'Não')
+)
+
+class Aluno(models.Model):
+   nome = models.CharField(max_length=200)
+   matricula = models.CharField(max_length=200, choices=MATRICULA, default='Aluno')
+
+   def __str__(self):
+       return self.nome
+
 
 class Referido(models.Model):
     nome = models.CharField(max_length=200)
     telefone = models.CharField(max_length=200)
-    prioridade = models.BooleanField()
+    prioridade = models.CharField(max_length=200, choices=PRIORIDADE, default="Neutro")
     status = models.CharField(max_length=200, choices=STATUS_REFERIDOS, default='Iniciar')
-    data_agendamento = models.DateTimeField(null=True, blank=True)
-    quem_indicou = models.CharField(max_length=200, default='')
-    aluno = models.BooleanField(default=False)
+    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome

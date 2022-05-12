@@ -7,9 +7,9 @@ from .models import Referido
 class ReferidoForm(forms.ModelForm):
     class Meta:
         model = Referido
-        fields = ['quem_indicou', 'aluno', 'nome', 'telefone', 'prioridade', 'status']
+        fields = ['aluno', 'aluno', 'nome', 'telefone', 'prioridade', 'status']
         widgets = {
-            'quem_indicou': TextInput(attrs={
+            'aluno': TextInput(attrs={
                 'class': "form-control"
             }),
             'nome': TextInput(attrs={
