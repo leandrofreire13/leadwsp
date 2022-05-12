@@ -11,6 +11,9 @@ from .models import Referido
 def index(request):
     return render(request, 'referidos/inicio.html')
 
+def roteiro(request):
+    return render(request, 'referidos/roteiro.html')
+
 @login_required
 def list_referidos(request):
     referidos = Referido.objects.all().order_by('-status').reverse()
