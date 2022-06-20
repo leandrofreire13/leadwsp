@@ -2,26 +2,44 @@
 
 {% block content %}
 <html>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="links.css">
-  <title>WSP - Links</title>
-  <body>
-     <div class="container text-centro">
-      <h2>WSP - Meus links</h2><br>
-                 <a href="roteiro" style="color: aquamarine; text-decoration: none;">Roteiro WSP</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="links.css">
+    <title>WSP - Links</title>
+    <style>
+      .text-centro{
+    text-align: center;
+    padding-top: 50px;
+}
+a{
+    text-decoration: none;
+    color: rgb(74, 219, 74);
+}
+body{
+    background-color: rgb(29, 27, 27);
+    color: white;
+}
+.form-control{
+    background-color: black;
+    color: white;
+}
+    </style>
+    <body>
+       <div class="container">
+        <h2 class="text-centro">WSP - Meus links</h2><br>
+                   <a href="roteiro.html">Roteiro WSP</a>
 <br><br>
-      <h3><a style="color: aquamarine; text-decoration: none;" href="https://checkout.wiseup.com/lead?seller=wsp&route=payment&source=0033600001XBgGmAAL" target="_blank">Abrir Checkout</a> </h3><br>
-  </div>
+        <h3><a href="https://checkout.wiseup.com/lead?seller=wsp&route=payment&source=0033600001XBgGmAAL" target="_blank">Abrir Checkout</a> </h3><br>
+    </div>
 
-  <div class="container">
-      <p>Link de vendas</p>
-      <textarea cols="10" rows="1" class="link-text form-control">https://wup.onl/0033600001XBgGmAAL</textarea>
-      <button class="btn btn-primary" id="copiar">Copiar</button>
-      <br><br>
+    <div class="container">
+        <p>Link de vendas</p>
+        <textarea cols="10" rows="1" class="link-text form-control">https://wup.onl/0033600001XBgGmAAL</textarea>
+        <button class="btn btn-warning" id="copiar">Copiar</button>
+        <br><br>
 
-     <!--Link pos matricula-->
+       <!--Link pos matricula-->
 <h2> Wiseup Online</h2>
 <textarea name="" id="" cols="30" rows="10" class="link-text-1 text form-control">
 *Parabéns, seu acesso anual foi efetivado, sua jornada na Wise Up Online começou!* 👏🎉
@@ -32,7 +50,7 @@
 *Assista ao vídeo de como estudar com Wiseup Online* 
 https://drive.google.com/file/d/1MrZLB6Sxooxg-OdYM5tpCcuCZv2HXVFB/view?usp=sharing
 </textarea>
-<button class="btn btn-primary" id="copiar-1">Copiar</button>
+<button class="btn btn-warning" id="copiar-1">Copiar</button>
 <br><br>
 <h2> Wiseup Live</h2>
 <textarea name="" id="" cols="30" rows="10" class="link-text-2 text form-control">
@@ -44,7 +62,7 @@ https://drive.google.com/file/d/1MrZLB6Sxooxg-OdYM5tpCcuCZv2HXVFB/view?usp=shari
 *Assista ao vídeo de como estudar com Wiseup Live* 
 https://drive.google.com/file/d/1UavVIEMxWzPJOW3mn6fY6nqbhsM_NhZr/view?usp=sharing
 </textarea> 
-<button class="btn btn-primary" id="copiar-2">Copiar</button>
+<button class="btn btn-warning" id="copiar-2">Copiar</button>
 <br><br>
 <h2>Textos para validação</h2>
 <p>Para quem matrículou</p>
@@ -54,7 +72,7 @@ Entrei para um projeto muito legal de inglês, com flexibilidade de fazer qualqu
 Indiquei seu contato para o Leandro (O DDD dele é 11 de SP) executivo que me atendeu.
 Abraços
 </textarea>
-<button class="btn btn-primary" id="copiar-3">Copiar</button>
+<button class="btn btn-warning" id="copiar-3">Copiar</button>
 
 <br><br>
 <p>Para quem NÃO matrículou</p>
@@ -64,74 +82,74 @@ Tive acesso a um projeto muito legal de inglês, com flexibilidade de fazer qual
 Indiquei seu contato para o Leandro (O DDD dele é 11 de SP) executivo que me atendeu.
 Abraços
 </textarea>
-<button class="btn btn-primary" id="copiar-4">Copiar</button>
+<button class="btn btn-warning" id="copiar-4">Copiar</button>
 
 <br><br>
 <p>Conheça a Wiseup (Para que não se matrículou)</p>
 <textarea name="" id="" cols="10" rows="1" class="link-text-5 form-control">
 https://bit.ly/3yjHiuW
 </textarea>
-<button class="btn btn-primary" id="copiar-5">Copiar</button>
+<button class="btn btn-warning" id="copiar-5">Copiar</button>
 
 
 </div>
 <br><br><br><br><br>
 </body>
 <script>
-  //Botão do link de vendas
-  let button = document.querySelector('#copiar');
-  button.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text');
-  textArea.select();
-  document.execCommand('copy');
+    //Botão do link de vendas
+    let button = document.querySelector('#copiar');
+    button.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
-   //Botão do WOL
-   let button1 = document.querySelector('#copiar-1');
-  button1.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text-1');
-  textArea.select();
-  document.execCommand('copy');
+    });
+     //Botão do WOL
+     let button1 = document.querySelector('#copiar-1');
+    button1.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text-1');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
+    });
 
-   //Botão do Wiseup Live
-   let button2 = document.querySelector('#copiar-2');
-  button2.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text-2');
-  textArea.select();
-  document.execCommand('copy');
+     //Botão do Wiseup Live
+     let button2 = document.querySelector('#copiar-2');
+    button2.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text-2');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
+    });
 
-   //Botão do texto de validação 1
-   let button3 = document.querySelector('#copiar-3');
-  button3.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text-3');
-  textArea.select();
-  document.execCommand('copy');
+     //Botão do texto de validação 1
+     let button3 = document.querySelector('#copiar-3');
+    button3.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text-3');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
+    });
 
-     //Botão do texto de validação 2
-     let button4 = document.querySelector('#copiar-4');
-  button4.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text-4');
-  textArea.select();
-  document.execCommand('copy');
+       //Botão do texto de validação 2
+       let button4 = document.querySelector('#copiar-4');
+    button4.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text-4');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
-  //Botão do texto de validação 2
-  let button5 = document.querySelector('#copiar-5');
-  button5.addEventListener('click', function(e) {
-  let textArea = document.querySelector('.link-text-5');
-  textArea.select();
-  document.execCommand('copy');
+    });
+    //Botão do texto de validação 2
+    let button5 = document.querySelector('#copiar-5');
+    button5.addEventListener('click', function(e) {
+    let textArea = document.querySelector('.link-text-5');
+    textArea.select();
+    document.execCommand('copy');
 
-  });
+    });
 </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
 
 {% endblock %}

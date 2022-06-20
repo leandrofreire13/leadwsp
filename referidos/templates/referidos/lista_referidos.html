@@ -17,9 +17,9 @@
     <div class="col">
       <input class="form-control" type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Indicação.." title="Type in a name">
     </div>
-    <!-- <div class="col">
+    <div class="col">
       <input class="form-control" type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Nome.." title="Type in a name">
-    </div> -->
+    </div>
   </div>
 </form>
 <div class="table-responsive">
@@ -92,7 +92,7 @@ function myFunction2() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[2];
+    td = tr[i].getElementsByTagName("td")[0];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -110,7 +110,7 @@ function myFunction3() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[2];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
