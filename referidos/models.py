@@ -1,17 +1,5 @@
 from django.db import models
 
-"""
-    Modelo de referido com os seguintes campos.
-        Nome de quem indicou (Criar como um model)
-        Nome do referido
-        Telefone
-        Proridade
-        Status 
-        Whatsapp ** Não precisa eu acho
-        Data
-        Hora
-"""
-
 STATUS_REFERIDOS = (
     ('Iniciar', 'INICIAR'),
     ('Ligação 1', 'LIGACAO_1'),
@@ -27,8 +15,8 @@ STATUS_REFERIDOS = (
 )
 
 MATRICULA = (
-   ('Aluno', 'Aluno'),
-   ('Não Aluno', 'Não Aluno')
+   ('Sim', 'Sim'),
+   ('Não', 'Não')
 )
  
 PRIORIDADE = (
@@ -37,20 +25,13 @@ PRIORIDADE = (
    ('Não', 'Não')
 )
 
-class Aluno(models.Model):
-   nome = models.CharField(max_length=200)
-   matricula = models.CharField(max_length=200, choices=MATRICULA, default='Aluno')
-
-   def __str__(self):
-       return self.nome
-
-
 class Referido(models.Model):
     nome = models.CharField(max_length=200)
     telefone = models.CharField(max_length=200)
     prioridade = models.CharField(max_length=200, choices=PRIORIDADE, default="Neutro")
     status = models.CharField(max_length=200, choices=STATUS_REFERIDOS, default='Iniciar')
-    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+    indicou = models.CharField(max_length=200)
+    matriculou = models.CharField(max_length=200, choices=MATRICULA, default='Sim')
 
     def __str__(self):
         return self.nome

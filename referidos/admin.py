@@ -1,17 +1,12 @@
 from django.contrib import admin
-from .models import Referido, Aluno
+from .models import Referido
 
 
 # Register your models here.
-class CamposReferidos(admin.ModelAdmin):
-    list_display = ('aluno','nome', 'telefone', 'prioridade', 'status')
+# class CamposReferidos(admin.ModelAdmin):
+#     list_display = ('aluno','nome', 'telefone', 'prioridade', 'status')
 
 
-admin.site.register(Referido, CamposReferidos)
+admin.site.register(Referido)
 
 # Register your models here.
-class CamposAluno(admin.ModelAdmin):
-    list_display = ('nome','matricula')
-
-
-admin.site.register(Aluno, CamposAluno)
