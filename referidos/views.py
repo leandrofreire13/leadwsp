@@ -53,3 +53,8 @@ def referido_edit(request, pk):
     else:
         form = ReferidoForm(instance=post)
     return render(request, 'referidos/referidos_form.html', {'form': form})
+
+
+@login_required
+def upload(request):
+    return render(request, 'referidos/upload.html')

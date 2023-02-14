@@ -50,11 +50,11 @@
       <td><a href="https://wa.me/{{ referido.telefone }}" target="_blank"><i class="fas fa-phone"></i></a></td>
       
       <td>
-          {% if referido.prioridade == 'Neutro' %}
+          <!-- {% if referido.prioridade == 'Neutro' %}
             <p class="neutral"> Neutro</i></p>
             {% else %}
-            <p class="neutral"> <i class="fas fa-square-full"></i> </p>
-          {% endif %}
+            <p class="good"> <i class="fas fa-square-full"></i>{{ referido.prioridade }} </p>
+          {% endif %} -->{{ referido.prioridade }}
       </td>
       <td><p data-status="{{ referido.status }}" class="status">{{ referido.status }} </p></td>
       <td><a href="{% url 'referido_edit' pk=referido.pk %}" class="btn btn-outline-info"  role="button">
